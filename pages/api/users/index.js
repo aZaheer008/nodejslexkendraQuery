@@ -7,8 +7,8 @@ const { KendraClient, QueryCommand } = require("@aws-sdk/client-kendra");
 
 let configuration = { region: "us-east-1" ,
 credentials: new AWS.Credentials({
-  accessKeyId: process.env.accessKeyId,         // Add your access IAM accessKeyId
-  secretAccessKey: process.env.secretAccessKey    // Add your access IAM secretAccessKey
+  accessKeyId: "accessKeyId",         // Add your access IAM accessKeyId
+  secretAccessKey: "secretAccessKey"    // Add your access IAM secretAccessKey
 })};
 const client = new LexRuntimeV2Client(configuration);
 import { usersRepo } from 'helpers';
@@ -36,8 +36,8 @@ function handler(req, res) {
             let textToQuery = req.body;
             // Set up the query parameters
             const params = {
-                botId: 'VKK0NTDIGM',
-                botAliasId: 'TSTALIASID',
+                botId: 'botId',
+                botAliasId: 'botAliasId',
                 localeId: 'en_US',
                 sessionId: 'YOUR_SESSION_ID',
                 text: textToQuery,
@@ -58,7 +58,7 @@ function handler(req, res) {
                     console.log("----kendra query---");
                     const kendraclient = new KendraClient(configuration);
                     const params = {
-                        IndexId: process.env.IndexId,
+                        IndexId: "c0db2140-342c-4717-a89a-92ac4cd076ae",
                         QueryText: textToQuery,
                     };
                     

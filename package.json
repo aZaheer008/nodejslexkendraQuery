@@ -3,11 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "SET NODE_OPTIONS=--openssl-legacy-provider &&  next dev",
-        "build1": "next build",
-        "start1": "next start",
-        "start": "SET NODE_OPTIONS=--openssl-legacy-provider &&  next start",
-        "build": "SET NODE_OPTIONS=--openssl-legacy-provider &&  next build"
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
     },
     "dependencies": {
         "@aws-sdk/client-kendra": "^3.272.0",
